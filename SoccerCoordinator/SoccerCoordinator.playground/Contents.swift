@@ -22,24 +22,24 @@
 
 // Individual dictionaries for each player
 
-let player1: [String: Any] = ["Name": "Joe Smith", "Height": 42, "XP": true, "Guardian": "Jim and Jan Smith"]
-let player2: [String: Any] = ["Name": "Jill Tanner", "Height": 36, "XP": true, "Guardian": "Clara Tanner"]
-let player3: [String: Any] = ["Name": "Bill Bon", "Height": 43, "XP": true, "Guardian": "Sara and Jenny Bon"]
-let player4: [String: Any] = ["Name": "Eva Gordon", "Height": 45, "XP": false, "Guardian": "Wendy and Mike Gordon"]
-let player5: [String: Any] = ["Name": "Matt Gill", "Height": 40, "XP": false, "Guardian": "Chales and Sylvia Gill"]
-let player6: [String: Any] = ["Name": "Kimmy Stein", "Height": 41, "XP": false, "Guardian": "Bill and Hillary Stein"]
-let player7: [String: Any] = ["Name": "Sammy Adams", "Height": 45, "XP": false, "Guardian": "Jeff Adams"]
-let player8: [String: Any] = ["Name": "Karl Saygan", "Height": 42, "XP": true, "Guardian": "Heather Bledsoe"]
-let player9: [String: Any] = ["Name": "Suzane Greenberg", "Height": 44, "XP": true, "Guardian": "Henrietta Dumas"]
-let player10: [String: Any] = ["Name": "Sal Dali", "Height": 41, "XP": false, "Guardian": "Gala Dali"]
-let player11: [String: Any] = ["Name": "Joe Kavalier", "Height": 39, "XP": false, "Guardian": "Sam and Elaine Kavalier"]
-let player12: [String: Any] = ["Name": "Ben Finkelstein", "Height": 44, "XP": false, "Guardian": "Aaron and Finkelstein"]
-let player13: [String: Any] = ["Name": "Diego Soto", "Height": 41, "XP": true, "Guardian": "Robin and Sarika Soto"]
-let player14: [String: Any] = ["Name": "Chloe Alaska", "Height": 47, "XP": false, "Guardian": "David and Jamie Alaska"]
-let player15: [String: Any] = ["Name": "Arnold Willis", "Height": 43, "XP": false, "Guardian": "Claire Willis"]
-let player16: [String: Any] = ["Name": "Phillip Helm", "Height": 44, "XP": true, "Guardian": "Thomas Helm and Eva Jones"]
-let player17: [String: Any] = ["Name": "Les Clay", "Height": 42, "XP": true, "Guardian": "Wynonna Brown"]
-let player18: [String: Any] = ["Name": "Herschel Krustofski", "Height": 45, "XP": true, "Guardian": "Hyman and Rachel Krustofski"]
+var player1: [String: Any] = ["Name": "Joe Smith", "Height": 42, "XP": true, "Guardian": "Jim and Jan Smith"]
+var player2: [String: Any] = ["Name": "Jill Tanner", "Height": 36, "XP": true, "Guardian": "Clara Tanner"]
+var player3: [String: Any] = ["Name": "Bill Bon", "Height": 43, "XP": true, "Guardian": "Sara and Jenny Bon"]
+var player4: [String: Any] = ["Name": "Eva Gordon", "Height": 45, "XP": false, "Guardian": "Wendy and Mike Gordon"]
+var player5: [String: Any] = ["Name": "Matt Gill", "Height": 40, "XP": false, "Guardian": "Chales and Sylvia Gill"]
+var player6: [String: Any] = ["Name": "Kimmy Stein", "Height": 41, "XP": false, "Guardian": "Bill and Hillary Stein"]
+var player7: [String: Any] = ["Name": "Sammy Adams", "Height": 45, "XP": false, "Guardian": "Jeff Adams"]
+var player8: [String: Any] = ["Name": "Karl Saygan", "Height": 42, "XP": true, "Guardian": "Heather Bledsoe"]
+var player9: [String: Any] = ["Name": "Suzane Greenberg", "Height": 44, "XP": true, "Guardian": "Henrietta Dumas"]
+var player10: [String: Any] = ["Name": "Sal Dali", "Height": 41, "XP": false, "Guardian": "Gala Dali"]
+var player11: [String: Any] = ["Name": "Joe Kavalier", "Height": 39, "XP": false, "Guardian": "Sam and Elaine Kavalier"]
+var player12: [String: Any] = ["Name": "Ben Finkelstein", "Height": 44, "XP": false, "Guardian": "Aaron and Finkelstein"]
+var player13: [String: Any] = ["Name": "Diego Soto", "Height": 41, "XP": true, "Guardian": "Robin and Sarika Soto"]
+var player14: [String: Any] = ["Name": "Chloe Alaska", "Height": 47, "XP": false, "Guardian": "David and Jamie Alaska"]
+var player15: [String: Any] = ["Name": "Arnold Willis", "Height": 43, "XP": false, "Guardian": "Claire Willis"]
+var player16: [String: Any] = ["Name": "Phillip Helm", "Height": 44, "XP": true, "Guardian": "Thomas Helm and Eva Jones"]
+var player17: [String: Any] = ["Name": "Les Clay", "Height": 42, "XP": true, "Guardian": "Wynonna Brown"]
+var player18: [String: Any] = ["Name": "Herschel Krustofski", "Height": 45, "XP": true, "Guardian": "Hyman and Rachel Krustofski"]
 
 // Putting all the players in one dictionary
 
@@ -123,31 +123,20 @@ for (var player) in inexperienced {
 var letters: [String] = []
 
 for player in teamSharks {
-    letters.append("Dear\(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team Sharks! Your first training session will be \(teamSharksTraining)")
+    letters.append("Dear \(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team \(player["Team"]!)! Your first training session will be \(teamSharksTraining)")
 }
 
 for player in teamDragons {
-    letters.append("Dear\(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team Sharks! Your first training session will be \(teamDragonsTraining)")
+    letters.append("Dear \(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team \(player["Team"]!)! Your first training session will be \(teamDragonsTraining)")
 }
 
 for player in teamRaptors {
-    letters.append("Dear\(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team Sharks! Your first training session will be \(teamRaptorsTraining).")
+    letters.append("Dear \(player["Guardian"]!), we are delighted to inform you that \(player["Name"]!), has been selected to play for team \(player["Team"]!)! Your first training session will be \(teamRaptorsTraining).")
 }
 
-for i in 0..<letters.count {
-    print(letters[i])
+for letter in letters {
+    print(letter)
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
